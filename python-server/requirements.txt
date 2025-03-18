@@ -1,0 +1,7 @@
+flask                  # For creating the API
+flask-cors             # To allow cross-origin requests from frontend
+scikit-learn           # For TF-IDF vectorization & similarity calculation
+pandas                 # For handling hotel dataset
+numpy                  # For numerical operations
+joblib                 # For saving and loading TF-IDF models
+serpapi                # For fetching hotel data from Google Search
