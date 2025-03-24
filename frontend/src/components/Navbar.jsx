@@ -17,6 +17,7 @@ const Navbar = () => {
             <Link to="/events" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-150">Events</Link>
             <Link to="/flight" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-150">Flights</Link>
             <Link to="/hotels" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-150">Hotels</Link>
+            <Link to="/chat" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-150">Chat</Link>
             <Link to="/login" className="ml-4 px-4 py-2 rounded-md bg-white text-indigo-600 font-medium hover:bg-gray-100 transition duration-150">Login/Signup</Link>
           </div>
         </div>

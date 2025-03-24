@@ -10,7 +10,8 @@ import HotelList from './components/HotelList'
 import Flight from './components/Flight'
 import Events from './components/Events'
 import Hotel from './components/Hotel'
-import Navbar from './components/Navbar'
+
+import ImageLocation from './components/ImageLocation'
 function App() {
  
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/flight" element={<Flight />} />
         <Route path="/events" element={<Events/>} />
         <Route path='/hotels' element={<Hotel/>}/>
+        <Route path='/image' element={<  ImageLocation/>}/>
         
       </Routes>
   

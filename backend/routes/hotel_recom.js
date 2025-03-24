@@ -70,7 +70,7 @@ rec_router.post("/hotels/recommend", async (req, res) => {
     // Return the hotel details array directly instead of wrapping it in an object
     res.json(hotelDetails);
   } catch (error) {
-    console.error("Error fetching recommendations:", error.message);
+    console.error("Error fetching recommendations:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

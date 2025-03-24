@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-
+import Navbar from "./Navbar";
 const ChatBotPage = () => {
   const [messages, setMessages] = useState([]);
   const [prompt, setPrompt] = useState('');
@@ -67,6 +67,8 @@ const ChatBotPage = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white p-4 md:p-6">
       <div className="w-full max-w-4xl flex flex-col h-[90vh] bg-gray-800 bg-opacity-95 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
         {/* Header */}
@@ -163,7 +165,7 @@ const ChatBotPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 
