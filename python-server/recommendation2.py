@@ -3,6 +3,11 @@ import numpy as np
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
+
+
+import app as example
+
+
 app = Flask(__name__)
 CORS(app)  
 df=pd.read_csv(r'C:\Users\Nandini Modi\Desktop\PlanIt\python-server\data\hotels\booking_com-travel_sample.csv')
@@ -112,6 +117,28 @@ def get_recomm():
 
     json_output = json.dumps(json_data)
     return jsonify(recommendations.to_dict(orient='records'))
+
+@app.route('/generate/iternary',methods=['POST'])
+def generate_itinerary():
+    data = request.get_json()
+    state = data.get('location')
+    start_date= data.get('start_date')
+    end_date = data.get('end_date')
+    budget = data.get('budget')
+    interest= data.get('intrest')
+     
+    travel_planner = example.TravelPlannerCrew()
+    itinerary = travel_planner.plan_trip(
+        location=state,
+        start_date=start_date,
+        end_date=end_date,
+        budget=budget,
+        interests=interest
+    )
+    print("Your Travel Itinerary:")
+    for day in itinerary:
+        print(day)
+    return jsonify({"iternary":itinerary})
 
 if __name__ == '__main__':
     app.run(debug=True)

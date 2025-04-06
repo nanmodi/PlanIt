@@ -41,6 +41,7 @@ export default function ImprovedImageUpload() {
       });
 
       const data = await response.json();
+      console.log(data);
       setMessage(Array.isArray(data.message) ? data.message : JSON.parse(data.message));
 
     } catch (error) {

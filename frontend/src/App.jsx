@@ -12,6 +12,7 @@ import Events from './components/Events'
 import Hotel from './components/Hotel'
 
 import ImageLocation from './components/ImageLocation'
+import Iternary from './components/Iternary'
 function App() {
  
 
@@ -26,7 +27,7 @@ function App() {
         <Route path="/events" element={<Events/>} />
         <Route path='/hotels' element={<Hotel/>}/>
         <Route path='/image' element={<  ImageLocation/>}/>
-        
+        <Route path='/itineary' element={<Iternary></Iternary>}></Route>
       </Routes>
   
     </>

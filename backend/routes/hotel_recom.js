@@ -67,7 +67,6 @@ rec_router.post("/hotels/recommend", async (req, res) => {
       }
     }));
 
-    // Return the hotel details array directly instead of wrapping it in an object
     res.json(hotelDetails);
   } catch (error) {
     console.error("Error fetching recommendations:", error);
@@ -75,7 +74,7 @@ rec_router.post("/hotels/recommend", async (req, res) => {
   }
 });
 
-// Route to fetch recommended hotels by price
+
 rec_router.get('/hotels/by-price', async (req, res) => {
   const { price, count } = req.query;
   try {
@@ -86,7 +85,6 @@ rec_router.get('/hotels/by-price', async (req, res) => {
   }
 });
 
-// Route to fetch recommended hotels by rating
 rec_router.get('/hotels/by-rating', async (req, res) => {
   const { rating, count } = req.query;
   try {

@@ -25,7 +25,7 @@ async function getDestinations(labels)
 
 
 
-  const prompt = `Based on these image labels: ${labels.join(", ")}, suggest 5 beautiful travel destinations that match this theme, including a short description, weather conditions and location in terms of city,state and country.Respond in JSON format with the following structure:
+  const prompt = `Based on these image labels: ${labels.join(", ")}, suggest 5 beautiful travel destinations that match this theme also can interpret if its a monument or temple, including a short description, weather conditions and location in terms of city,state and country.Respond in JSON format with the following structure:
 
 [
   {
@@ -43,8 +43,8 @@ async function getDestinations(labels)
 
 }
 async function processImage(image) {
-  const query = await getLabels(image); // Await the function
- return  await getDestinations(query); // Await if needed
+  const query = await getLabels(image); 
+ return  await getDestinations(query); 
 }
 
 export default processImage;

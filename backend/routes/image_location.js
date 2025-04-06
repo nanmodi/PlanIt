@@ -21,7 +21,7 @@ process_router.post('/upload', upload.single('image'), async (req, res) => {
         if (!req.file) {
             return res.status(400).json({ error: 'No file uploaded' });
         }
-
+        console.log('File uploaded:', req.file);
         const imagePath = req.file.path; 
         console.log('Image path:', imagePath);
         if (!imagePath) {

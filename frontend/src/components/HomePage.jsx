@@ -10,7 +10,7 @@ const HomePage = () => {
       <Navbar />
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
-          {/* Hero section */}
+          
           <div className="text-center mb-16">
             <h1 className="text-6xl font-extrabold tracking-tight">
               Explore the World with Ease
@@ -20,15 +20,22 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Features grid */}
-          <div className="grid md:grid-cols-3 gap-10 mt-12">
-            {/* Feature Cards */}
+         
+          <div className="grid md:grid-cols-4 gap-10 mt-12">
+            
             {[
               {
                 title: "Discover with Image",
                 desc: "Upload images of landmarks and get instant insights on your next destination.",
                 link: "/image",
                 bg: "from-indigo-400 to-purple-500",
+                icon: "camera",
+              },
+              {
+                title: "Genrate iternary with ai",
+                desc: "Plan your trip by genrating internary and having fun and love vvhh.",
+                link: "/itineary",
+                bg: "from-burgandy-400 to-red-500",
                 icon: "camera",
               },
               {
@@ -65,7 +72,7 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* CTA section */}
+          
           <div className="mt-20 text-center">
             <h2 className="text-3xl font-bold text-white">Ready to start your journey?</h2>
             <p className="text-lg text-gray-200 mt-3">Plan and book your next adventure today.</p>

@@ -1,6 +1,7 @@
 import express from 'express';
 import chatWithGemini from '../chat.js';
 const ai_router=express.Router();
+
 ai_router.post('/chat',async (req,res)=>{
   try {
     const { prompt } = req.body;
