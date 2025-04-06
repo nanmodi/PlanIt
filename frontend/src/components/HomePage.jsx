@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
           
@@ -34,7 +34,7 @@ const HomePage = () => {
               {
                 title: "Genrate iternary with ai",
                 desc: "Plan your trip by genrating internary and having fun and love vvhh.",
-                link: "/itineary",
+                link: "/iternary",
                 bg: "from-burgandy-400 to-red-500",
                 icon: "camera",
               },

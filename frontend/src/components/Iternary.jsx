@@ -18,7 +18,7 @@ const Iternary = () => {
         end_date,
         budget,
         interests,
-      })
+      },{withCredentials:true})
       console.log(response.data)
       setIternary(response.data.iternary) // Set to the 'iternary' array from response
     } catch (e) {

@@ -6,10 +6,6 @@ import jwt from "jsonwebtoken";
 import cors from "cors";
 dotenv.config();
 const user_router=Router();
-user_router.use(cors({
-  origin: ['http://localhost:5173','http://localhost:5000'], // your frontend
-  credentials: true
-}));
 
 user_router.post("/register",async (req,res)=>{
   try {
@@ -27,12 +23,19 @@ user_router.post("/register",async (req,res)=>{
     await newUser.save();
     const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
     res.cookie("token", token, {
-      httpOnly: true,
+      
       secure: process.env.NODE_ENV === "production", // Use HTTPS in production
       sameSite: "Strict", // or "Lax"
       maxAge: 60 * 60 * 1000 // 1 hour
     });
-    res.status(201).json({ message: "User registered successfully", token });
+    res.cookie("name", newUser.name, {
+     
+      secure: process.env.NODE_ENV === "production", // Use HTTPS in production
+      sameSite: "Strict", // or "Lax"
+      maxAge: 60 * 60 * 1000 // 1 hour
+    });
+    
+    res.status(201).json({ message: "User registered successfully",  name: newUser.name, email: newUser.email, token });
   }
   catch(error) {
     console.error(error);
@@ -57,12 +60,20 @@ user_router.post("/login",async (req,res)=>{
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
     res.cookie("token", token, {
-      httpOnly: true,
+      
       secure: process.env.NODE_ENV === "production", // Use HTTPS in production
       sameSite: "Strict", // or "Lax"
       maxAge: 60 * 60 * 1000 // 1 hour
     });
-    res.status(200).json({ message: "Login successful", token });
+    res.cookie("name", user.name, {
+      
+      secure: process.env.NODE_ENV === "production", // Use HTTPS in production
+      sameSite: "Strict", // or "Lax"
+      maxAge: 60 * 60 * 1000 // 1 hour
+    });
+    
+    console.log(req.cookies)
+    res.status(200).json({ message: "Login successful", name: user.name, email: user.email, token });
 
   } catch(error) {
     console.error(error);

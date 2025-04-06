@@ -38,6 +38,7 @@ export default function ImprovedImageUpload() {
       const response = await fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
+        credentials: "include", // Add this to send cookies
       });
 
       const data = await response.json();

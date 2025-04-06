@@ -14,6 +14,7 @@ const Events = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ location }),
+        credentials: "include", // Include credentials for CORS
       });
       
       const data = await response.json();
@@ -28,7 +29,7 @@ const Events = () => {
 
   return (
     <>
-    <Navbar />
+    
     <div className="max-w-4xl mx-auto p-6 bg-blue-50 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">Search Events by Location</h2>
       

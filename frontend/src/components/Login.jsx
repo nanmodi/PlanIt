@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 const Login = ({ onLogin }) => {
-  const [isLogin, setIsLogin] = useState(true); // Toggle between login and signup
+  const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,16 +11,15 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage(''); 
+    setMessage('');
 
     const url = isLogin ? 'http://localhost:3000/login' : 'http://localhost:3000/register';
     const payload = isLogin ? { email, password } : { name, email, password };
 
     try {
-      console.log('Sending request to:', url, 'with payload:', payload); // Debugging line
       const response = await axios.post(url, payload, { withCredentials: true });
       setMessage(response.data.message);
-      onLogin(response.data.token); 
+      onLogin(response.data.token, response.data.name); // Pass token and name
     } catch (error) {
       setMessage(error.response?.data?.error || 'Something went wrong');
     }

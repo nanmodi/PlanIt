@@ -21,10 +21,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/", user_router);
-app.use("/ai", ai_router);
-app.use("/", rec_router);
-app.use("/",service_router);
-app.use("/",process_router);
+app.use("/ai",authenticate, ai_router);
+app.use("/",authenticate, rec_router);
+app.use("/",authenticate,service_router);
+app.use("/",authenticate,process_router);
 
 app.get("/", (req, res) => {
   res.send("Happy");

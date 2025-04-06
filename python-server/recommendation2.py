@@ -9,7 +9,7 @@ import app as example
 
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
 df=pd.read_csv(r'C:\Users\Nandini Modi\Desktop\PlanIt\python-server\data\hotels\booking_com-travel_sample.csv')
 print(df.head())
 print(df.columns)

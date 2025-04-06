@@ -27,7 +27,7 @@ function HotelList() {
         landmark,
         startDate,
         endDate,
-      });
+      },{withCredentials:true});
 
       console.log(response.data);
 
