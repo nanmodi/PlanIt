@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "planit-454217",
-  "private_key_id": "e04d859197e6910e68ac70433836f36b762639e2",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCsb6r6mBNzd6E5\n3P2qNQChbEJsuGJkUPzMvJhU61lJbHAJiUz0Pu2mVajTuw9p2eok/5xkL3juQJIp\nmsFIbTgOLRoxblXWYC/AVDVNWyj29qfb3or3z/D03Dok153HZjrFXiaIo3tbZrCQ\nI598xkJ+eZRDPBr8MNBZD0m5KIiXltxlRGxEyj9V10MJYKvGDNInP+X5QmkcLSpQ\nkv1Cf7EmsZEbovZMbQ534ea3WwtHMGrZWylc2rdMylY6GRipiAwNdqQRegz4pDou\nt9HYSMuUpuEGBl9HyLjHthHkgbWEycUun5OMI1je7PsZLMm0YpaXLP3tANO2cMIS\nMLVxQHMdAgMBAAECggEAClu6O3Z3iKf8NTkguyDsSkYcvAzcIDw7Ng3y3/sJRd9a\niurGsXoMQEHaCT9YlC+6ddbYWAOqsd6KyS6vg1XIQxW+LTpRtAswIyS2f6Xvu9zM\n8D4Z6VFXn1CRZOrXjVsHQcQ/mqqou4YGKjUcR1xeMdxvexXOZdgwKSwWw3rQsGZk\nKUlhUYbDOBFT15KSOLODo0/OLBywJUOIuMzI6l729pG1kb/XTJaxwIKs1u3ZyG5u\n57ox0QPe9wONxy6UpiyVdhRgD6Og4Xm2ThMYh13A/T/PL93jjL6VxGBvtzlDopap\n0Hk5MGCGzAMMvW/BIuIBfK9XygyIO1k3DwmSfv53UwKBgQDXP4nxLYicZAwA65Ge\ncRRfM+OO2tACNfjKBLi7Zt4M/lJwzGCt5iWMQk4bbw37Zhgvh0x/ecPcfoZDs/Kj\niHNGKxpEgIrRl8cnW3oz5DYgw/xMIxs1TPhayqZDqwYERZwxih8hiV2nXu4UXb84\nFucEpmRmbJ0eK3J+850QrBOvEwKBgQDNFSecW7EhfK1zBe2KmW2xLoy4qiUA0izr\nsTUV9yrQvgUOEn9Dl5S6Qo4PTfp/Ifz+/2bQx/uIrGWCfCf20dHlFiTJsGfxNV2J\nnxh4FqunAsWVLaxESQhScBpNKE55sN50x0cf2ooCUKe/t4bZRA++BvgCSF6eaXbn\nZ37w9KsrDwKBgQDAiWdcQnyWV6+dCxpgfYnZdtKwL+4sbBa0rfCIQQWS3dLkbwxz\nwRAJHC49v+Lj43jy2rWEuWiHTO3QlaAOw7lJJLkEWW7S+E7+V4dB73qzaFu/xw9J\naCYnIGoE0XA6VgHXFlOube9GDVYtBYZMJ8BRmnzoWXNZT0fFYyg1h5a73QKBgQCY\n+JKXOn2hMNJf3agVneQIKWSlyaPYPO1s0L18KOUy1soGeR2cWVCCrmowWEXk1oFT\n40XZrZGdnJoK/nkAzfj2G9JM7txZOykOIjGqQZ6/8H1YjLzWInOmqh+0NcBzXM5R\n5OLUi7oth+PYSRi4rt/fKmuLqFeLabdbXAN/z8BtWQKBgDwM9itQSHBR/27Yb8d4\np34w9UyOTfWjO7LmJqsaGIRS0R4Q5R+OVuy2mbUrnJMANpdYLwVpkTvJLsPElg0z\nEJgX+aobnASJ04jEmMNXOXE36sVZqMbI9hzq89rQRatNErTd58EHOFYAEW4MeaTy\nAO9CWV8xaLyRm32hXzNmlmOx\n-----END PRIVATE KEY-----\n",
-  "client_email": "planitai@planit-454217.iam.gserviceaccount.com",
-  "client_id": "112628045667664292598",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/planitai%40planit-454217.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
