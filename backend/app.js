@@ -14,9 +14,15 @@ dotenv.config();
 const app = express();
 run()
 app.use(cors({
-  origin: ['http://localhost:5173','http://localhost:5000','https://comfy-cheesecake-4706d6.netlify.app'], 
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5000',
+    'https://comfy-cheesecake-4706d6.netlify.app',
+    'https://timely-cajeta-b04ed1.netlify.app'  
+  ],
   credentials: true
 }));
+
 
 app.use(express.json());
 app.use(cookieParser());
