@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 run()
 app.use(cors({
-  origin: ['http://localhost:5173','http://localhost:5000'], // your frontend
+  origin: ['http://localhost:5173','http://localhost:5000','https://comfy-cheesecake-4706d6.netlify.app'], 
   credentials: true
 }));
 
@@ -29,6 +29,5 @@ app.use("/",authenticate,process_router);
 app.get("/", (req, res) => {
   res.send("Happy");
 });
-app.listen(3000, () => {
-  console.log("App running on port 3000");
-});
+const port=process.env.PORT
+app.listen(port, () => console.log(`Server running on port ${port}`));

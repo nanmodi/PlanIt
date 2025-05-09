@@ -39,7 +39,8 @@ console.log(isAuthenticated)
       <Navbar isAuthenticated={isAuthenticated} userName={userName} onLogout={handleLogout} />
       <Routes>
         <Route path="/login" element={!isAuthenticated ? <Login onLogin={handleLogin} /> : <Navigate to="/home" />} />
-        <Route path="/home" element={<ProtectedRoute element={<HomePage />} />} />
+        <Route path="/home" element={<HomePage />} />
+
         <Route path="/chat" element={<ProtectedRoute element={<ChatbotPage />} />} />
         <Route path="/hotel" element={<ProtectedRoute element={<HotelList />} />} />
         <Route path="/flight" element={<ProtectedRoute element={<Flight />} />} />
@@ -47,7 +48,7 @@ console.log(isAuthenticated)
         <Route path="/hotels" element={<ProtectedRoute element={<Hotel />} />} />
         <Route path="/image" element={<ProtectedRoute element={<ImageLocation />} />} />
         <Route path="/iternary" element={<ProtectedRoute element={<Iternary />} />} />
-        <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} />} />
+        <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/home"} />} />
       </Routes>
     </>
   );

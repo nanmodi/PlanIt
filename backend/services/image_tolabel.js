@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { GoogleGenerativeAI } from "@google/generative-ai";
 console.log(process.env.API_KEY);
-const genAI = new GoogleGenerativeAI('AIzaSyCtCFeGtW8uD-N7qyhI1x8VjdEfikV8D44');
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 async function getLabels(image) {
   
 
