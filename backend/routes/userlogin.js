@@ -72,7 +72,7 @@ user_router.post("/login",async (req,res)=>{
       maxAge: 60 * 60 * 1000 // 1 hour
     });
     
-    console.log(req.cookies)
+    console.log("apple",req.cookies)
     res.status(200).json({ message: "Login successful", name: user.name, email: user.email, token });
 
   } catch(error) {
