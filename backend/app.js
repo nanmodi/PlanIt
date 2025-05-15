@@ -7,7 +7,7 @@ import service_router from "./routes/service.js";
 import process_router from "./routes/image_location.js";
 import run from './db/connect.js'
 import cookieParser from 'cookie-parser';
-import { authenticate } from "./middlewares/auth.js";
+
 import user_router from "./routes/userlogin.js";
 dotenv.config();
 
@@ -27,10 +27,10 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 app.use("/", user_router);
-app.use("/ai",authenticate, ai_router);
-app.use("/",authenticate, rec_router);
+app.use("/ai", ai_router);
+app.use("/", rec_router);
 app.use("/",service_router);
-app.use("/",authenticate,process_router);
+app.use("/",process_router);
 
 app.get("/", (req, res) => {
   res.send("Happy");
