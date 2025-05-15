@@ -47,7 +47,8 @@ export async function getEvents(location) {
           };
           
         });
-
+        console.log('event process');
+        console.log(events);
         resolve(events);
       }
     );
